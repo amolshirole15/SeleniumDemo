@@ -3,7 +3,6 @@ pipeline {
 
     tools {
         // Ensure .NET SDK 8 or similar is available
-        // You can also install via PATH as shown earlier
     }
 
     stages {
