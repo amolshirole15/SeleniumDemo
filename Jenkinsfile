@@ -10,20 +10,14 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'dotnet build --configuration Release'
+                sh 'dotnet build'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'dotnet test --logger "trx;LogFileName=test_results.trx"'
+                sh 'dotnet test'
             }
-        }
-    }
-
-    post {
-        always {
-            junit '**/test_results.trx'
         }
     }
 }
