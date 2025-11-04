@@ -2,10 +2,19 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/usr/local/share/dotnet:${PATH}"
+        PATH+DOTNET = "/usr/local/share/dotnet"
     }
 
     stages {
+        stage('Check Tools') {
+            steps {
+                sh 'echo $PATH'
+                sh 'which sh'
+                sh 'which dotnet'
+                sh 'dotnet --info'
+            }
+        }
+
         stage('Restore') {
             steps {
                 sh 'dotnet restore'
@@ -18,10 +27,16 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Test') {
             steps {
                 sh 'dotnet test'
             }
         }
     }
+
+    // post {
+    //     always {
+    //         junit 'TestResults/*.trx'
+    //     }
+    // }
 }
