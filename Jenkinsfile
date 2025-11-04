@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // PATH = "${env.PATH}:/usr/local/share/dotnet"
-        PATH+DOTNET = "/usr/local/share/dotnet"
+        "PATH+DOTNET" = "/usr/local/share/dotnet"
     }
 
     options {
