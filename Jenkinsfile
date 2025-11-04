@@ -1,14 +1,14 @@
 pipeline {
     agent any
 
-    environment {
-        // PATH = "${env.PATH}:/usr/local/share/dotnet"
-        "PATH+DOTNET" = "/usr/local/share/dotnet"
-    }
+    // environment {
+    //     // PATH = "${env.PATH}:/usr/local/share/dotnet"
+    //     "PATH+DOTNET" = "/usr/local/share/dotnet"
+    // }
 
-    options {
-        shell('/bin/bash')   // explicitly tell Jenkins to use bash
-    }
+    // options {
+    //     shell('/bin/bash')   // explicitly tell Jenkins to use bash
+    // }
 
     stages {
         stage('Check Tools') {
