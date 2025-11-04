@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH+DOTNET = "/usr/local/share/dotnet"
+        "PATH+DOTNET" = "/usr/local/share/dotnet"
     }
 
     stages {
