@@ -36,7 +36,8 @@ namespace NunitTestProject.Pages
         {
             // WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             // wait.Until(drv => LnkEmployeeDetails.Displayed && LnkManageUser.Displayed && LnkLogOff.Displayed);
-            return (LnkEmployeeDetails.Displayed,LnkManageUser.Displayed);
+            return (LnkEmployeeDetails.Displayed, LnkManageUser.Displayed);
+            
         }
     }
 }
